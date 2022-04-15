@@ -1,0 +1,23 @@
+li {
+  position: relative;
+  &::before, &::after {
+    content: '';
+    height: 4px;
+    width: 0;
+    bottom: 0;
+    position: absolute;
+    background-color: #3498db;
+    transition: all 0.25s ease-in-out;
+  }
+  &::before {
+    right: 50%;
+  }
+  &::after {
+    left: 50%;
+  }
+  &:hover {
+    &::before,&::after {
+      width: 50%;
+    }
+  }
+}
